@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/collection_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:paddingTop="@dimen/margin_small">
+
+        <Button
+            android:id="@+id/add_goods"
+            style="@style/button_normal"
+            android:layout_width="@dimen/button_small_width"
+            android:layout_height="@dimen/button_small_height"
+            android:text="添加商品" />
+
+        <Button
+            android:id="@+id/ok"
+            style="@style/button_normal"
+            android:layout_width="@dimen/button_small_width"
+            android:layout_height="@dimen/button_small_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="确认" />
+    </RelativeLayout>
+</LinearLayout>

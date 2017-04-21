@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/line"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/app_vertical_margin"
+    android:paddingLeft="@dimen/app_vertical_margin"
+    android:paddingRight="@dimen/app_vertical_margin"
+    android:paddingStart="@dimen/app_vertical_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/line">
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/trading_pay_custom" />
+
+            <TextView
+                android:id="@+id/name_view"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="name" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/trading_pay_company" />
+
+            <TextView
+                android:id="@+id/company_view"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="name" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/trading_pay_amount" />
+
+            <TextView
+                android:id="@+id/account_view"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="name"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/button_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/payment_order_pay_ok" />
+</LinearLayout>

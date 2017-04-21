@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/line"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/company_name" />
+
+                <EditText
+                    android:id="@+id/company_name"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_weight="3"  />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:text="@string/company_number" />
+
+                <EditText
+                    android:id="@+id/company_number"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/company_address" />
+
+                <EditText
+                    android:id="@+id/company_address"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:background="@null"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/company_phone" />
+
+                <EditText
+                    android:id="@+id/company_phone"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:background="@null"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"  />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/name_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_border_height"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:text="@string/company_Introduction" />
+
+            <EditText
+                android:layout_marginTop="@dimen/margin_small"
+                android:id="@+id/company_des"
+                style="@style/name_style"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_height="100dp"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:text="test" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

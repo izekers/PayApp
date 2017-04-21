@@ -1,0 +1,126 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="startLoadTheme" parent="AppTheme.NoActionbar">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:background">@drawable/splash</item>
+    </style>
+
+    <style name="logopic">
+        <item name="android:layout_height">@dimen/login_pic_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/bg</item>
+    </style>
+
+    <style name="border_style">
+        <item name="android:layout_height">@dimen/border_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/shape_border_gray</item>
+    </style>
+
+    <style name="line_style">
+        <item name="android:layout_height">@dimen/line_border_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="big_line_style">
+        <item name="android:layout_height">@dimen/line_border_height_big</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="icon_style">
+        <item name="android:layout_height">@dimen/icon_height</item>
+        <item name="android:layout_width">@dimen/icon_width</item>
+    </style>
+
+    <style name="user_icon_style">
+        <item name="android:layout_height">@dimen/user_icon_height</item>
+        <item name="android:layout_width">@dimen/user_icon_width</item>
+    </style>
+
+    <style name="name_style">
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textSize">@dimen/kv_itemview_name_textsize</item>
+        <item name="android:textColor">@color/kv_itemview_name_textcolor</item>
+    </style>
+
+    <style name="value_style">
+        <item name="android:background">@null</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/kv_itemview_value_textsize</item>
+        <item name="android:textColor">@color/kv_itemview_value_textcolor</item>
+    </style>
+
+    <style name="hint_style">
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/kv_itemview_hint_textsize</item>
+        <item name="android:textColor">@color/kv_itemview_hint_textcolor</item>
+    </style>
+
+    <style name="item_text_style">
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/item_txt_size</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+    <style name="itemview_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="button_small_main" parent="button_normal">
+        <item name="android:layout_height">@dimen/button_small_height</item>
+        <item name="android:layout_width">@dimen/button_small_width</item>
+        <item name="android:padding">@dimen/button_small_margin</item>
+    </style>
+
+    <style name="verification.style" parent="button_solid_blue">
+        <item name="android:textColor">@color/kv_itemview_name_textcolor</item>
+    </style>
+
+    <style name="button_solid_gray.style" parent="button_solid_gray">
+        <item name="android:layout_height">@dimen/button_small_height</item>
+        <item name="android:layout_width">@dimen/button_small_width</item>
+        <item name="android:padding">@dimen/button_small_margin</item>
+    </style>
+
+    <style name="button_solid_oringe.style" parent="button_strong">
+        <item name="android:layout_height">@dimen/button_small_height</item>
+        <item name="android:layout_width">@dimen/button_small_width</item>
+        <item name="android:padding">@dimen/button_small_margin</item>
+    </style>
+</resources>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/linear_divider"
+        android:showDividers="middle">
+
+
+        <LinearLayout
+            android:id="@+id/user_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin"
+            android:background="@color/white"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/my_icon"
+                android:id="@+id/textView5" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_view"
+                android:layout_width="@dimen/user_icon_width"
+                android:layout_height="@dimen/user_icon_height" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_width="@dimen/itemview_right_width"
+                android:layout_height="@dimen/itemview_right_height"
+                android:src="@drawable/next_indicator"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin"
+            android:divider="@drawable/line"
+            android:showDividers="middle"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_layout"
+                style="@style/line_style">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_account" />
+
+                <TextView
+                    android:id="@+id/id_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical" />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nick_layout"
+                style="@style/line_style">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_name" />
+
+                <TextView
+                    android:id="@+id/nick_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/goods_name" />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"
+                    android:src="@drawable/next_indicator"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email_layout"
+                style="@style/line_style">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_email"/>
+
+                <TextView
+                    android:id="@+id/email_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical" />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"
+                    android:src="@drawable/next_indicator"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin"
+            android:divider="@drawable/line"
+            android:showDividers="middle"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sex_layout"
+                style="@style/line_style">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_sex"
+                    android:id="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/sex_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical"/>
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"
+                    android:src="@drawable/next_indicator"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                style="@style/line_style">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_address" />
+
+                <TextView
+                    android:id="@+id/address_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical" />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"
+                    android:src="@drawable/next_indicator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signature_layout"
+                style="@style/line_style">
+
+                <TextView
+
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_signature" />
+
+                <TextView
+                    android:id="@+id/signature_view"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="right|center_vertical"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@string/goods_name" />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_width="@dimen/itemview_right_width"
+                    android:layout_height="@dimen/itemview_right_height"
+                    android:src="@drawable/next_indicator"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

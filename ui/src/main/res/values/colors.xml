@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="gray_3">#333</color>
+    <color name="gray_6">#666</color>
+    <color name="gray_9">#999</color>
+    <color name="gray_e">#eee</color>
+    <color name="gray_f6">#f6f6f6</color>
+    <color name="gray_f2">#f2f2f2</color>
+    <color name="gray_f7">#f7f7f7</color>
+    <color name="gray_de">#dedede</color>
+    <color name="gray_d7">#d7d7d7</color>
+    <color name="gray_ac">#acacac</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="blue">#4ca4fe</color>
+
+    <color name="bg">@color/gray_f2</color>
+    <color name="name">#28312a</color>
+    <color name="date">#3a3a3a</color>
+    <color name="time">#0476be</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="main">#00a199</color>
+    <color name="depth_main_color">#009077</color>
+    <color name="light_main_color">#22c3bb</color>
+    <color name="strong_color">#f6bb16</color>
+    <color name="depth_strong_color">#d49914</color>
+    <color name="green">#557733</color>
+
+
+
+    <color name="ability_toolbar_bg">@color/main</color>
+    <color name="ability_textcolor">@color/white</color>
+
+    <color name="itemview_name_textcolor">@color/gray_3</color>
+    <color name="kv_itemview_name_textcolor">@color/gray_3</color>
+    <color name="kv_itemview_value_textcolor">@color/gray_3</color>
+    <color name="kv_itemview_hint_textcolor">@color/gray_9</color>
+</resources>

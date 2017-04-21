@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/ability_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_f2"
+            android:divider="@drawable/linear_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/user_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingEnd="@dimen/app_vertical_margin"
+                    android:paddingLeft="@dimen/app_vertical_margin"
+                    android:paddingRight="@dimen/app_vertical_margin"
+                    android:paddingStart="@dimen/app_vertical_margin"
+                    android:paddingTop="@dimen/margin_small">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_icon"
+                        android:layout_width="@dimen/user_icon_width"
+                        android:layout_height="@dimen/user_icon_height"/>
+
+                    <TextView
+                        android:id="@+id/user_nick"
+                        style="@style/name_style"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/itemview_name_marginleft"
+                        android:layout_marginStart="@dimen/itemview_name_marginleft"
+                        android:layout_weight="1"
+                        android:text="name"
+                        android:textColor="@color/itemview_name_textcolor"
+                        android:textSize="@dimen/itemview_name_textsize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/itemview_right_width"
+                        android:layout_height="@dimen/itemview_right_height"
+                        android:src="@drawable/next_indicator"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/line"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:showDividers="middle">
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/bankcard_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/bankcard2"
+                    app:name="@string/bank_account_management"
+                    app:right="@drawable/next_indicator" />
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/realname_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/real_name"
+                    app:name="@string/real_name_authentication"
+                    app:right="@drawable/next_indicator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/line"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:showDividers="middle">
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/company_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/cpmpany_auth"
+                    app:name="@string/company_authentication"
+                    app:right="@drawable/next_indicator" />
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/companyinfo_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/company_info"
+                    app:name="@string/company_info"
+                    app:right="@drawable/next_indicator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/line"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:showDividers="middle">
+
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/account_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/saft"
+                    app:name="@string/account_soft"
+                    app:right="@drawable/next_indicator" />
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/pay_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/about"
+                    app:name="@string/about"
+                    app:right="@drawable/next_indicator" />
+
+                <com.zekers.ui.view.widget.ItemView
+                    android:id="@+id/exit_view"
+                    style="@style/itemview_style"
+                    app:lefticon="@drawable/exit"
+                    app:name="@string/exit"
+                    app:right="@drawable/next_indicator" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

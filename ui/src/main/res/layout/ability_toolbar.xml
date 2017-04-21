@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zekers.ui.view.widget.AbilityToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ability_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/ability_toolbar_bg">
+    <RelativeLayout
+        android:id="@+id/toolbar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/toolbar_margin"
+        android:paddingRight="@dimen/toolbar_margin">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_width"
+            android:layout_height="@dimen/toolbar_back_height"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/toolbar_back" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/ability_textcolor"
+        android:textSize="@dimen/toolbar_title_txtsize" />
+
+    <RelativeLayout
+        android:id="@+id/toolbar_menu_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/toolbar_margin"
+        android:paddingRight="@dimen/toolbar_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/toolbar_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_menu_txtsize"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toolbar_menu1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/toolbar_menu_between_size"
+        android:paddingStart="@dimen/toolbar_menu_between_size"
+        android:paddingRight="@dimen/toolbar_margin"
+        android:paddingEnd="@dimen/toolbar_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/toolbar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_menu_txtsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toolbar_menu2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/toolbar_menu1"
+        android:layout_toStartOf="@id/toolbar_menu1"
+        android:paddingRight="@dimen/toolbar_menu_between_size"
+        android:paddingEnd="@dimen/toolbar_menu_between_size"
+        android:paddingLeft="@dimen/toolbar_margin"
+        android:paddingStart="@dimen/toolbar_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_btn_size"
+            android:layout_height="@dimen/toolbar_btn_size"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/toolbar_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_menu_txtsize" />
+    </RelativeLayout>
+</com.zekers.ui.view.widget.AbilityToolBar>

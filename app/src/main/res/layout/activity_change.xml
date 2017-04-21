@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/txt_layout"
+        style="@style/line_style"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input_txt"
+            style="@style/name_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/vertical_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/man_layout"
+            style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:text="@string/boy" />
+
+            <ImageView
+                android:id="@+id/man_icon"
+                android:layout_width="@dimen/user_icon_width"
+                android:layout_height="@dimen/user_icon_height"
+                android:layout_marginEnd="@dimen/app_vertical_margin"
+                android:layout_marginRight="@dimen/app_vertical_margin"
+                android:visibility="gone"
+                android:src="@drawable/right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/vertical_line_gray" />
+
+        <LinearLayout
+            android:id="@+id/woman_layout"
+            style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:text="@string/girl" />
+
+            <ImageView
+                android:id="@+id/woman_icon"
+                android:layout_width="@dimen/user_icon_width"
+                android:layout_height="@dimen/user_icon_height"
+                android:layout_marginEnd="@dimen/app_vertical_margin"
+                android:layout_marginRight="@dimen/app_vertical_margin"
+                android:visibility="gone"
+                android:src="@drawable/right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/vertical_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/big_txt_layout"
+        style="@style/big_line_style"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/big_input_txt"
+            style="@style/name_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:maxLines="2"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/vertical_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_layout"
+        style="@style/big_line_style"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/line_style"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/sp_province"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/vertical_line_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/line_style"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/sp_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/vertical_line_gray" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

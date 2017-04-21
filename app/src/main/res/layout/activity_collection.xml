@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/customer_account" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:hint="@string/customer_account_hint" />
+                <ImageView
+                    android:id="@+id/add_book_select"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/addbook_no"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/customer_name" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:hint="@string/customer_name_hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:text="@string/goods_select" />
+                <Button
+                    style="@style/button_normal"
+                    android:id="@+id/goods_menu"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:text="点击选择商品"/>
+                <Spinner
+                    android:id="@+id/sp_goodslist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/be_select_goodslist"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="@string/goods_type" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical">
+
+                    <Spinner
+                        android:id="@+id/sp_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/sp_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/goods_name" />
+
+                <EditText
+                    android:id="@+id/goods_name"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:hint="@string/goods_name_hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/goods_price" />
+
+                <EditText
+                    android:id="@+id/goods_price"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/goods_price_hint" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/goods_unit" />
+
+                <EditText
+                    android:id="@+id/goods_unit"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:hint="@string/goods_unit_hint" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/goods_number" />
+
+                <EditText
+                    android:id="@+id/goods_num"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:hint="@string/goods_number_hint" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/goods_amount" />
+
+                <TextView
+                    android:id="@+id/goods_account"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textSize="14sp"
+                    android:hint="@string/goods_amount_hint" />
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

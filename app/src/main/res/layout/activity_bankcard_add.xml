@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/ability_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="@drawable/line">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/trad_color_list_bg"
+                android:paddingBottom="@dimen/margin_little"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin"
+                android:paddingTop="@dimen/margin_little"
+                android:text="@string/bank_account_bind"
+                android:textColor="@color/trad_color_textcolor" />
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bank_account_man" />
+
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/bank_name"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/bank_account" />
+
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/bank_number"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bank_account_address" />
+
+                <EditText
+                    android:background="@null"
+                    android:id="@+id/bank_address"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/phone" />
+
+                <EditText
+                    android:id="@+id/bank_phone"
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:inputType="phone"
+                    android:background="@null"
+                    android:hint="@string/bank_account_phone_hint" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/line_style"
+                android:paddingEnd="@dimen/app_vertical_margin"
+                android:paddingLeft="@dimen/app_vertical_margin"
+                android:paddingRight="@dimen/app_vertical_margin"
+                android:paddingStart="@dimen/app_vertical_margin">
+
+                <TextView
+                    style="@style/name_style"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/verification_code" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/verification_view"
+                        style="@style/value_style"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:inputType="number" />
+
+                    <Button
+                        android:id="@+id/btn_verification"
+                        style="@style/verification.style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/get_verification"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/button_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/app_vertical_margin"
+            android:layout_marginLeft="@dimen/app_vertical_margin"
+            android:layout_marginRight="@dimen/app_vertical_margin"
+            android:layout_marginStart="@dimen/app_vertical_margin"
+            android:text="@string/ok" />
+    </LinearLayout>
+</ScrollView>

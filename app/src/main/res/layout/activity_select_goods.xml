@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/goods_select" />
+
+        <EditText
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/goods_type" />
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/goods_name" />
+
+        <EditText
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_price" />
+
+        <EditText
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_number" />
+
+        <EditText
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_amount" />
+
+        <EditText
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/button_small_main"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/ok" />
+    </RelativeLayout>
+</LinearLayout>

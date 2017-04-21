@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/app_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_name"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="name" />
+
+            <TextView
+                android:id="@+id/item_number"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_vale"
+                style="@style/hint_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="value" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金额：" />
+
+            <TextView
+                android:id="@+id/item_account"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="number"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

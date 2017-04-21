@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/app_vertical_margin"
+    android:paddingRight="@dimen/app_vertical_margin"
+    android:paddingTop="@dimen/margin_small"
+    android:paddingBottom="@dimen/margin_small"
+    android:orientation="vertical">
+    <Button
+        style="@style/button_small_main"
+        android:text="@string/goods_add"/>
+    <Button
+        style="@style/button_small_main"
+        android:layout_alignParentRight="true"
+        android:text="@string/ok"/>
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/select_layout"
+            style="@style/line_style"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/goods_select" />
+
+            <EditText
+                android:id="@+id/goods_select"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@null"
+                android:hint="@string/goods_name_hint" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/goods_type" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_vertical">
+
+                <Spinner
+                    android:id="@+id/sp_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/sp_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/goods_name" />
+
+            <EditText
+                style="@style/name_style"
+                android:id="@+id/goods_name"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/goods_name_hint" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/goods_price" />
+
+            <EditText
+                style="@style/name_style"
+                android:id="@+id/goods_price"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:hint="@string/goods_price_hint" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/goods_unit" />
+
+            <EditText
+                style="@style/name_style"
+                android:id="@+id/goods_unit"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/goods_unit_hint" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

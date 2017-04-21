@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/ability_toolbar"/>
+    <include layout="@layout/item_pay_custom_info"/>
+    <TextView
+        style="@style/name_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trad_color_list_bg"
+        android:paddingBottom="@dimen/margin_little"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:paddingTop="@dimen/margin_little"
+        android:text="@string/trading_goods_info"
+        android:textColor="@color/trad_color_textcolor" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_update_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

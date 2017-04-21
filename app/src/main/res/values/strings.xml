@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">璟朝支付</string>
+
+    <string name="back">返回</string>
+    <string name="ok">确认</string>
+    <string name="update">修改</string>
+
+    <string name="login">登录</string>
+    <string name="logup">注册</string>
+    <string name="go_logup">立即注册</string>
+    <string name="go_login">有账号，马上登录</string>
+    <string name="check_logup">点击注册表示同意<u>用户协议</u></string>
+    <string name="phone">手机号</string>
+    <string name="phone2">手机号码</string>
+    <string name="phone_change">更换手机号</string>
+    <string name="phone_change_hint">更换手机后，下次登录将使用新手机号码，旧数据也将转移到新号码，请谨慎操作！</string>
+    <string name="password">密码</string>
+    <string name="password_update">修改密码</string>
+    <string name="forget_passwrod">忘记密码</string>
+    <string name="old_passwrod">原密码</string>
+    <string name="new_passwrod">新密码</string>
+    <string name="re_passwrod">确认密码</string>
+    <string name="verification_code">验证码</string>
+    <string name="get_verification">获取验证码</string>
+    <string name="pay_by_qrcode">扫码付</string>
+    <string name="collection">收款</string>
+    <string name="collection_records">收款单</string>
+    <string name="payment_records">付款单</string>
+    <string name="commodity_management">商品管理</string>
+    <string name="new_order">新建订单</string>
+    <string name="transaction_records">交易记录</string>
+    <string name="user_manager">用户中心</string>
+    <string name="customer_service_center">平台客服中心</string>
+    <string name="customer_service_number">020-88888888</string>
+
+    <string name="qr_hint">请付款方扫描下方二维码进行付款</string>
+    <string name="price_money">￥&#160;%1$d</string>
+
+    <string name="home">首页</string>
+    <string name="the_address_book">通讯录</string>
+    <string name="my">我的</string>
+    <string name="me">我</string>
+    <string name="my_info">个人信息</string>
+
+    <string name="collection_order">收款订单</string>
+    <string name="collection_order_add">创建收款单</string>
+    <string name="collection_order_all">全部收款单</string>
+    <string name="collection_order_wait">待收款单</string>
+    <string name="collection_order_has">已收订单</string>
+    <string name="collection_order_man">付款人</string>
+    <string name="collection_wait">待收款</string>
+    <string name="collection_has">已收款</string>
+
+    <string name="payment_order">付款订单</string>
+    <string name="payment_order_success">付款成功</string>
+    <string name="payment_order_all">全部付款单</string>
+    <string name="payment_order_wait">待付款单</string>
+    <string name="payment_order_has">已付订单</string>
+    <string name="payment_order_man">收款人</string>
+    <string name="payment_wait">待付款</string>
+    <string name="payment_has">已付款</string>
+
+    <string name="goods_num">共%1$d件商品&#160;合计：</string>s
+
+    <string name="order_update">重建订单</string>
+    <string name="order_detail">查看订单</string>
+    <string name="collection_immediately">马上收款</string>
+
+    <string name="collection_order_update">修改收款单</string>
+    <string name="collection_order_check">收款单详情</string>
+    <string name="collection_order_pay">订单收款</string>
+    <string name="payment_order_pay">订单付款</string>
+    <string name="payment_order_pay_ok">确定付款</string>
+
+    <string name="order_cancle">取消订单</string>
+    <string name="pay_immediately">现在付款</string>
+
+    <string name="goods_add">添加商品</string>
+    <string name="goods_select">商品选择</string>
+    <string name="goods_select_hint">如选择列表无，请按下方添加</string>
+    <string name="goods_type">商品类别</string>
+    <string name="goods_type_first">选择大类</string>
+    <string name="goods_type_second">选择子类</string>
+    <string name="goods_name">商品名称</string>
+    <string name="goods_name_hint">请输入商品详细名称</string>
+    <string name="goods_price">商品单价</string>
+    <string name="goods_price_hint">请输入数字、如15.83</string>
+    <string name="goods_unit">商品单位</string>
+    <string name="goods_unit_hint">请输入单位、如米、匹</string>
+    <string name="goods_number">商品数量</string>
+    <string name="goods_number_hint">请输入数字，如:18</string>
+    <string name="goods_amount">商品金额</string>
+    <string name="goods_amount_hint">系统计算，最多保留小数点后2位</string>
+
+    <string name="customer_account">对方账户</string>
+    <string name="customer_account_hint">请输入客户手机号码</string>
+    <string name="customer_name">客户姓名</string>
+    <string name="customer_name_hint">请输入客户姓名</string>
+
+    <string name="trading_hours">交易时间：</string>
+    <string name="trading_type">交易类型：</string>
+    <string name="trading_id">订单编号：</string>
+    <string name="trading_amount">交易金额：</string>
+    <string name="trading_pay_man">付款方：</string>
+    <string name="trading_order_amount">订单金额：</string>
+    <string name="trading_pay_custom">收款人：</string>
+    <string name="trading_pay_company">收款单位：</string>
+    <string name="trading_pay_amount">付款金额：</string>
+    <string name="trading_collection_man">收款方：</string>
+    <string name="trading_goods_info">订单商品详情</string>
+    <string name="trading_list">已选商品列表</string>
+    <string name="trading_select_list">已选商品列表</string>
+
+    <string name="price">单价：</string>
+    <string name="number">数量：</string>
+    <string name="amount">金额：</string>
+
+
+    <string name="email_get_record">请输入邮箱收取交易记录</string>
+
+    <string name="bank_account_management">银行账号管理</string>
+    <string name="real_name_authentication">实名认证</string>
+    <string name="company_authentication">企业认证</string>
+    <string name="company_authentication_number">企业执照编号</string>
+    <string name="company_info">企业信息</string>
+    <string name="account_soft">账号与安全</string>
+    <string name="about">关于支付平台</string>
+    <string name="exit">退出</string>
+
+    <string name="my_icon">头像</string>
+    <string name="my_icon_change">修改头像</string>
+    <string name="my_account">账号</string>
+    <string name="my_name">昵称</string>
+    <string name="my_name_change">修改昵称</string>
+    <string name="my_email">邮箱</string>
+    <string name="my_email_change">修改邮箱</string>
+    <string name="my_sex">性别</string>
+    <string name="my_sex_change">选择性别</string>
+    <string name="my_address">地区</string>
+    <string name="my_address_change">修改地址</string>
+    <string name="my_signature">个性签名</string>
+    <string name="my_signature_change">修改个性签名</string>
+
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+
+    <string name="bank_account_null">您还没有添加银行卡\n点击右上角的"+"添加</string>
+    <string name="bank_account_bind">请绑定持卡本人的银行卡</string>
+    <string name="bank_account_add">添加银行卡</string>
+    <string name="bank_account_man">持卡人</string>
+    <string name="bank_account">卡号</string>
+    <string name="bank_account_address">开户行</string>
+    <string name="bank_account_phone_hint">请输入银行预留号码</string>
+
+
+    <string name="real_name_authentication_hint">*实名认证后的用户方可进行交易</string>
+    <string name="real_name">真实姓名</string>
+    <string name="real_name_number">身份证号码</string>
+    <string name="real_name_photo">上传身份证照片</string>
+    <string name="real_name_photo_man">手持身份证照片</string>
+
+    <string name="company_name">企业名称</string>
+    <string name="company_number">营业执照编码</string>
+    <string name="company_picture">上传营业执照</string>
+    <string name="company_address">企业地址</string>
+    <string name="company_phone">办公电话</string>
+    <string name="company_Introduction">企业简介</string>
+    <string name="company_Introduction_hint">可输入公司主要运营范围</string>
+
+    <string name="check_version">检测更新</string>
+    <string name="feedback">意见反馈</string>
+
+    <string name="hint_search_order">请输入姓名或产品名称查找订单</string>
+
+</resources>

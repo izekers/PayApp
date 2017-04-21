@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <TextView
+        style="@style/name_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trad_color_list_bg"
+        android:paddingBottom="@dimen/margin_little"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:paddingTop="@dimen/margin_little"
+        android:text="@string/real_name_authentication_hint"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/line">
+
+        <LinearLayout
+            style="@style/line_style"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/real_name" />
+
+            <EditText
+                android:id="@+id/real_name_txt"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_weight="4" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/line_style"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/real_name_number" />
+
+            <EditText
+                android:id="@+id/real_number_txt"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_weight="4" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/realname_img1"
+                android:layout_width="@dimen/real_man_img_width"
+                android:layout_height="@dimen/real_man_img_height"
+                android:src="@drawable/real_bg_1"/>
+
+            <ImageView
+                android:id="@+id/realname_img2"
+                android:layout_width="@dimen/real_man_img_width"
+                android:layout_height="@dimen/real_man_img_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/real_bg_2"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/name_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trad_color_list_bg"
+        android:paddingBottom="@dimen/margin_little"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:paddingTop="@dimen/margin_little"
+        android:text="@string/real_name_photo_man" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/realname_img3"
+            android:layout_width="@dimen/real_man_img_width"
+            android:layout_height="@dimen/real_man_img_height"
+            android:src="@drawable/real_pic"/>
+    </RelativeLayout>
+</LinearLayout>

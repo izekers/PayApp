@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/line"
+        android:showDividers="middle"
+        android:orientation="vertical">
+
+        <com.zekers.ui.view.widget.ItemView
+            style="@style/itemview_style"
+            app:name="@string/about"
+            app:right="@drawable/next_indicator"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin"/>
+        <com.zekers.ui.view.widget.ItemView
+            style="@style/itemview_style"
+            app:name="@string/check_version"
+            app:right="@drawable/next_indicator"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin" />
+
+        <com.zekers.ui.view.widget.ItemView
+            style="@style/itemview_style"
+            app:name="@string/feedback"
+            app:right="@drawable/next_indicator"
+            android:paddingEnd="@dimen/app_vertical_margin"
+            android:paddingLeft="@dimen/app_vertical_margin"
+            android:paddingRight="@dimen/app_vertical_margin"
+            android:paddingStart="@dimen/app_vertical_margin" />
+    </LinearLayout>
+</LinearLayout>

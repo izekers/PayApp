@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--App theme-->
+    <style name="Theme.AppCompat.Light.NoActionBar.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--通用属性-->
+    <style name="text_mainStyle">
+        <item name="android:textColor">@color/gray_9</item>
+        <item name="android:textSize">@dimen/text_main_size</item>
+    </style>
+
+    <style name="text_strongStyle">
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:textSize">@dimen/text_strong_size</item>
+    </style>
+
+    <!--button-->
+    <!--常用按钮-->
+    <style name="button_normal">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">@dimen/normal_item_height</item>
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--强调色按钮-->
+    <style name="button_strong">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_button_strong</item>
+        <item name="android:layout_height">@dimen/normal_item_height</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--镂空按钮-->
+    <style name="button_solid_gray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:background">@drawable/selector_button_solid_gray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="button_solid_oringe">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/selector_color_oringe</item>
+        <item name="android:background">@drawable/selector_button_solid_oringe</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="button_solid_blue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/selector_color_gray</item>
+        <item name="android:background">@drawable/selector_button_solid_blue</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

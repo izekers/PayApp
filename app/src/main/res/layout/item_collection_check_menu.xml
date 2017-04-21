@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/collection_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:paddingTop="@dimen/margin_small">
+
+        <Button
+            android:id="@+id/order_update"
+            style="@style/button_solid_gray.style"
+            android:text="@string/order_update" />
+
+        <Button
+            android:id="@+id/order_cancle"
+            style="@style/button_solid_gray.style"
+            android:layout_centerHorizontal="true"
+            android:text="@string/order_cancle" />
+
+        <Button
+            android:id="@+id/collection_immediately"
+            style="@style/button_solid_oringe.style"
+            android:layout_alignParentRight="true"
+            android:text="@string/collection_immediately" />
+    </RelativeLayout>
+</RelativeLayout>

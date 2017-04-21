@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_hours" />
+
+        <TextView
+            android:id="@+id/trade_time"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_type" />
+
+        <TextView
+            android:id="@+id/trade_type"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_id" />
+
+        <TextView
+            android:id="@+id/trade_no"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_amount" />
+
+        <TextView
+            android:id="@+id/trade_account"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_collection_man" />
+
+        <TextView
+            android:id="@+id/trade_man"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trading_pay_company" />
+
+        <TextView
+            android:id="@+id/trade_company"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

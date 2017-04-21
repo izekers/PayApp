@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/payment_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingEnd="@dimen/app_vertical_margin"
+    android:paddingLeft="@dimen/app_vertical_margin"
+    android:paddingRight="@dimen/app_vertical_margin"
+    android:paddingStart="@dimen/app_vertical_margin"
+    android:paddingTop="@dimen/margin_small">
+
+    <View
+        android:id="@+id/buff"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/latyout_cancle"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/order_cancle"
+            style="@style/button_solid_gray.style"
+            android:text="@string/order_cancle" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/order_pay_check"
+            style="@style/button_solid_gray.style"
+            android:layout_centerHorizontal="true"
+            android:text="@string/order_detail" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/latyout_ime"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/pay_immediately"
+            style="@style/button_solid_oringe.style"
+            android:layout_alignParentRight="true"
+            android:text="@string/pay_immediately" />
+    </FrameLayout>
+</LinearLayout>

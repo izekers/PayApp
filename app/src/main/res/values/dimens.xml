@@ -1,0 +1,52 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="application_horizontal_margin">16dp</dimen>
+    <dimen name="application_vertical_margin">16dp</dimen>
+
+
+    <dimen name="button_small_height">30dp</dimen>
+    <dimen name="button_small_width">80dp</dimen>
+    <dimen name="button_small_margin">5dp</dimen>
+
+    <dimen name="margin_little">5dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_mid">50dp</dimen>
+    <dimen name="margin_top">100dp</dimen>
+
+    <dimen name="login_pic_height">200dp</dimen>
+    <dimen name="line_border_height">50dp</dimen>
+    <dimen name="line_border_height_big">100dp</dimen>
+    <dimen name="border_height">50dp</dimen>
+    <dimen name="border_padding">10dp</dimen>
+
+    <dimen name="icon_height">20dp</dimen>
+    <dimen name="icon_width">20dp</dimen>
+
+    <dimen name="user_icon_height">40dp</dimen>
+    <dimen name="user_icon_width">40dp</dimen>
+
+    <dimen name="model_border_height">50dp</dimen>
+
+
+    <dimen name="model_textsize">18sp</dimen>
+
+    <dimen name="model_icon_size">35dp</dimen>
+
+    <dimen name="item_txt_size">14sp</dimen>
+
+    <dimen name="item_goods_right_height">30dp</dimen>
+    <dimen name="item_goods_right_width">30dp</dimen>
+
+    <dimen name="qr_img_size">200dp</dimen>
+
+    <dimen name="empty_card_view_size">200dp</dimen>
+
+    <dimen name="real_man_img_width">150dp</dimen>
+    <dimen name="real_man_img_height">100dp</dimen>
+
+
+    <dimen name="price_textsize">16sp</dimen>
+</resources>

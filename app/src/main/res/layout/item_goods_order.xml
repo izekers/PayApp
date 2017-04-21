@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/app_vertical_margin"
+    android:paddingRight="@dimen/app_vertical_margin"
+    android:paddingTop="@dimen/margin_small"
+    android:paddingBottom="@dimen/margin_small"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="goods_name" />
+
+        <LinearLayout
+            android:paddingTop="@dimen/margin_little"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price" />
+
+            <TextView
+                android:text="value"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/number"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="value"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="@dimen/margin_little"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/amount"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="value"
+                style="@style/name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/item_goods_right_width"
+        android:layout_height="@dimen/item_goods_right_height"
+        android:background="@color/blue"/>
+</LinearLayout>

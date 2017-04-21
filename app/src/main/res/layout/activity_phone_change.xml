@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ability_toolbar" />
+    <View
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_f2"/>
+    <LinearLayout
+        style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/phone" />
+
+        <EditText
+            android:id="@+id/new_phone"
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@null" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_f2"/>
+    <LinearLayout style="@style/line_style"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin">
+
+        <TextView
+            style="@style/name_style"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/verification_code" />
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/verification_view"
+                style="@style/value_style"
+                android:layout_weight="3"
+                android:background="@null"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_verification"
+                style="@style/verification.style"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/get_verification"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_f2"/>
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/button_normal"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="更换手机号" />
+    <TextView
+        android:textSize="13sp"
+        android:paddingEnd="@dimen/app_vertical_margin"
+        android:paddingLeft="@dimen/app_vertical_margin"
+        android:paddingRight="@dimen/app_vertical_margin"
+        android:paddingStart="@dimen/app_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更换手机后，下次登陆将是用新手机号码,旧的数据也将转移到新号码，请谨慎操作！"/>
+</LinearLayout>

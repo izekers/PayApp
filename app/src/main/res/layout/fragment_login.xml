@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/app_vertical_margin"
+    android:paddingRight="@dimen/app_vertical_margin">
+
+    <LinearLayout
+        android:id="@+id/value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/line"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/phone" />
+
+            <EditText
+                android:id="@+id/phone_view"
+                style="@style/value_style"
+                android:layout_weight="4"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/password" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password_view"
+                    style="@style/value_style"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/fogit_view"
+                    style="@style/hint_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/forget_passwrod" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/line_style">
+
+            <TextView
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/verification_code" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/verification_view"
+                    style="@style/value_style"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btn_verification"
+                    style="@style/verification.style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/get_verification"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/button_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/login" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_go_logup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/value_layout"
+        android:layout_marginTop="10dp"
+        android:text="@string/go_logup"
+        android:textColor="@android:color/holo_red_light" />
+</RelativeLayout>

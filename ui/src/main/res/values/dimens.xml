@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="app_margin">16dp</dimen>
+    <dimen name="app_horizontal_margin">16dp</dimen>
+    <dimen name="app_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_title_txtsize">19sp</dimen>
+    <dimen name="toolbar_menu_txtsize">15sp</dimen>
+    <dimen name="toolbar_height">75dp</dimen>
+    <dimen name="toolbar_margin">@dimen/app_margin</dimen>
+    <dimen name="toolbar_menu_between_size">10.5dp</dimen>
+    <dimen name="toolbar_btn_size">23dp</dimen>
+    <dimen name="toolbar_ic_size">@dimen/toolbar_btn_size</dimen>
+    <dimen name="toolbar_back_height">16dp</dimen>
+    <dimen name="toolbar_back_width">10dp</dimen>
+    <dimen name="toolbar_btn_size2">23dp</dimen>
+    <dimen name="toolbar_second_txt_txtsize">17sp</dimen>
+
+    <dimen name="itemview_icon_height">45dp</dimen>
+    <dimen name="itemview_icon_width">45dp</dimen>
+    <dimen name="itemview_name_textsize">14sp</dimen>
+    <dimen name="itemview_name_marginleft">10dp</dimen>
+    <dimen name="itemview_right_height">10dp</dimen>
+    <dimen name="itemview_right_width">10dp</dimen>
+
+
+    <dimen name="kv_itemview_name_textsize">14sp</dimen>
+    <dimen name="kv_itemview_value_textsize">14sp</dimen>
+    <dimen name="kv_itemview_hint_textsize">12sp</dimen>
+
+    <dimen name="text_main_size">12sp</dimen>
+    <dimen name="text_strong_size">15sp</dimen>
+
+    <dimen name="normal_item_height">35dp</dimen>
+</resources>

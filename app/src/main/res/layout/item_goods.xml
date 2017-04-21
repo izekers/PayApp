@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <!--What you want to show-->
+        <TextView
+            android:id="@+id/btn_delete"
+            style="@style/name_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/margin_small"
+            android:text="删除商品"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/app_horizontal_margin">
+
+            <TextView
+                android:id="@+id/item_name"
+                style="@style/name_style"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="name" />
+
+            <TextView
+                android:id="@+id/item_vale"
+                style="@style/hint_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="value" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/line" />
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>

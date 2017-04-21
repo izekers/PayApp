@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="itemView">
+        <attr name="lefticon" format="reference"/>
+        <attr name="name" format="string|reference"/>
+        <attr name="right" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="KVItemView">
+        <attr name="kvname" format="string"/>
+        <attr name="isinput" format="boolean"/>
+        <attr name="valuehint" format="string"/>
+    </declare-styleable>
+</resources>
