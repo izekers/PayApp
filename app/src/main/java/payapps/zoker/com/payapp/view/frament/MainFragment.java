@@ -31,6 +31,7 @@ import payapps.zoker.com.payapp.view.Activity.LoadFragmentActivity;
 import payapps.zoker.com.payapp.view.Activity.OrderCollectionActivity;
 import payapps.zoker.com.payapp.view.Activity.OrderPayActivity;
 import payapps.zoker.com.payapp.view.Activity.PayActivity;
+import payapps.zoker.com.payapp.view.Activity.SearchOrderActivity;
 import payapps.zoker.com.payapp.view.Constant;
 
 
@@ -75,7 +76,11 @@ public class MainFragment extends Fragment {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 //回车键
                 if(actionId == EditorInfo.IME_ACTION_DONE){
-                    BaseApplication.Instance.showToast("搜索");
+                    search.setText("");
+                    root_view.findFocus();
+                    Intent intent=new Intent(getContext(), SearchOrderActivity.class);
+                    intent.putExtra(Constant.keyWord,search.getText().toString());
+                    startActivity(intent);
                 }
                 return true;
             }

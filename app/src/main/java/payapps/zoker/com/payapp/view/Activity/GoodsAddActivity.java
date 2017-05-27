@@ -117,7 +117,7 @@ public class GoodsAddActivity extends BaseActivity implements AddGoodsContract.V
 
     @Override
     public void loading() {
-        dialog = DialogUtils.getLoadingDialog(this, "正在加载");
+        dialog = DialogUtils.getLoadingDialog(this, "正在加载",true);
     }
 
     @Override

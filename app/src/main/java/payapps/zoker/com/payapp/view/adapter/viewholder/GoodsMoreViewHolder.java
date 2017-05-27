@@ -23,7 +23,7 @@ public class GoodsMoreViewHolder extends VisitableViewHolder<Goods> {
 
     @Override
     public void setUpView(final Goods model, int position, RecyclerView.Adapter adapter) {
-        name.setText(model.getProductName());
-        value.setText(model.getCost()+"元");
+        name.setText(model.getProductName()+"("+model.getPrice()+"元/"+model.getUnit()+")");
+        value.setText(Goods.decaima(model.getCost())+"元");
     }
 }

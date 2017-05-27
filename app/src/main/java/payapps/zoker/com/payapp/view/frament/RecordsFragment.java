@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -26,6 +27,8 @@ import payapps.zoker.com.payapp.control.action.PayAction;
 import payapps.zoker.com.payapp.model.Records;
 import payapps.zoker.com.payapp.view.Activity.CollectionActivity;
 import payapps.zoker.com.payapp.view.Activity.PayActivity;
+import payapps.zoker.com.payapp.view.Activity.PayDetailActivity;
+import payapps.zoker.com.payapp.view.Activity.SearchOrderActivity;
 import payapps.zoker.com.payapp.view.Constant;
 import payapps.zoker.com.payapp.view.adapter.PayTypeFactory;
 import payapps.zoker.com.payapp.view.adapter.RecordsAdapter;
@@ -73,12 +76,23 @@ public class RecordsFragment extends Fragment {
                 int id = view.getId();
                 switch (id) {
                     case R.id.search:
+                        abilityToolBar.showSearchBar();
                         break;
                     case R.id.ok:
 //                        Intent intent = new Intent(getContext(), CollectionActivity.class);
 //                        startActivity(intent);
                         break;
                 }
+            }
+        });
+
+        abilityToolBar.setSearchListener(new AbilityToolBar.SearchListener() {
+            @Override
+            public void search(EditText editText, String keyWord) {
+                Intent intent=new Intent(getContext(), SearchOrderActivity.class);
+                intent.putExtra(Constant.keyWord,keyWord);
+                startActivity(intent);
+                abilityToolBar.hideSearchBar();
             }
         });
         abilityToolBar.setOnBackOnClickListener(new View.OnClickListener() {

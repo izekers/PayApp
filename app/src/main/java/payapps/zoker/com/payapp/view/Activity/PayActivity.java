@@ -1,22 +1,18 @@
 package payapps.zoker.com.payapp.view.Activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.AttributeSet;
 import android.view.View;
+import android.widget.EditText;
 
 import com.zekers.ui.view.widget.AbilityToolBar;
 import com.zekers.ui.view.widget.SimpleFragmentPagerAdapter;
 import com.zekers.utils.logger.Logger;
 
 import payapps.zoker.com.payapp.R;
-import payapps.zoker.com.payapp.view.Activity.BaseActivity;
 import payapps.zoker.com.payapp.view.Constant;
 import payapps.zoker.com.payapp.view.frament.CollectionFragment;
 import payapps.zoker.com.payapp.view.frament.PayFragment;
@@ -53,6 +49,7 @@ public class PayActivity extends BaseActivity {
                     int id = view.getId();
                     switch (id) {
                         case R.id.search:
+                            abilityToolBar.showSearchBar();
                             break;
                         case R.id.add:
                             Intent intent = new Intent(PayActivity.this, CollectionActivity.class);
@@ -71,7 +68,9 @@ public class PayActivity extends BaseActivity {
                     Logger.d("payactivity","id="+view.getId());
                     int id = view.getId();
                     switch (id) {
+                        case -1:
                         case R.id.search:
+                            abilityToolBar.showSearchBar();
                             break;
                         case R.id.add:
                             Intent intent = new Intent(PayActivity.this, CollectionActivity.class);
@@ -81,6 +80,15 @@ public class PayActivity extends BaseActivity {
                 }
             });
         }
+        abilityToolBar.setSearchListener(new AbilityToolBar.SearchListener() {
+            @Override
+            public void search(EditText editText, String keyWord) {
+                Intent intent=new Intent(PayActivity.this, SearchOrderActivity.class);
+                intent.putExtra(Constant.keyWord,keyWord);
+                startActivity(intent);
+                abilityToolBar.hideSearchBar();
+            }
+        });
 
         abilityToolBar.setOnBackOnClickListener(new View.OnClickListener() {
             @Override

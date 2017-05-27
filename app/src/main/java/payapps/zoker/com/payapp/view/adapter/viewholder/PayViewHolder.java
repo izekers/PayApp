@@ -3,6 +3,7 @@ package payapps.zoker.com.payapp.view.adapter.viewholder;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,6 +19,8 @@ import com.zekers.utils.logger.Logger;
 import com.zekers.utils.rx.EventBus.Events;
 import com.zekers.utils.rx.EventBus.RxBus;
 import com.zoker.base.DialogUtils;
+
+import java.text.DecimalFormat;
 
 import payapps.zoker.com.payapp.R;
 import payapps.zoker.com.payapp.control.action.PayAction;
@@ -121,7 +124,9 @@ public class PayViewHolder extends VisitableViewHolder<Details> {
         for (Goods goods : model.getOrderProductList()) {
             cost = cost + goods.getCost();
         }
-        item_amount.setText("" + cost);
+        DecimalFormat decimalFormat=new DecimalFormat(".00");//构造方法的字符格式这里如果小数不足2位,会以0补足.
+        String p=decimalFormat.format(cost);//format 返回的是字符串
+        item_amount.setText("" + p+"元");
         if (model.getOrderProductList() == null || model.getOrderProductList().isEmpty()) {
             item_goods_num.setText("共0件商品 合计");
         } else {
@@ -133,12 +138,12 @@ public class PayViewHolder extends VisitableViewHolder<Details> {
             list_2.setVisibility(View.GONE);
             Goods goods1 = model.getOrderProductList().get(0);
             list_1_name.setText(goods1.getProductName());
-            list_1_value.setText(goods1.getCost() + "元");
+            list_1_value.setText(Goods.decaima(goods1.getCost()) + "元");
             if (size > 1) {
                 list_2.setVisibility(View.VISIBLE);
                 Goods goods2 = model.getOrderProductList().get(1);
                 list_2_name.setText(goods2.getProductName());
-                list_2_value.setText(goods2.getCost() + "元");
+                list_2_value.setText(Goods.decaima(goods2.getCost()) + "元");
             }
             if (size > 2)
                 btn_more.setTextColor(itemView.getContext().getResources().getColor(R.color.kv_itemview_name_textcolor));

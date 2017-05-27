@@ -1,57 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_f2"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <RelativeLayout
-            style="@style/logopic"
-            android:background="@drawable/bg_home">
-
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bg_home"/>
             <LinearLayout
+                android:id="@+id/center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/margin_mid"
                 android:orientation="vertical"/>
-
-            <LinearLayout
-                style="@style/border_style"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="35dp"
-                android:layout_marginLeft="@dimen/app_horizontal_margin"
-                android:layout_marginRight="@dimen/app_horizontal_margin">
-
-                <ImageView
-                    style="@style/icon_style"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_marginEnd="@dimen/margin_small"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_marginStart="@dimen/margin_small"
-                    android:src="@drawable/search_bar_ic2" />
-                <!--<item name="android:imeOptions">actionNext</item>-->
-                <EditText
-                    android:id="@+id/search"
-                    style="@style/value_style"
-                    android:singleLine="true"
-                    android:maxLines="1"
-                    android:imeOptions="actionDone"
-                    android:hint="@string/hint_search_order"
-                    android:textSize="@dimen/kv_itemview_hint_textsize" />
-            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_below="@id/top"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@drawable/linear_divider"
@@ -285,6 +264,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_above="@id/bottom"
+        style="@style/border_style"
+        android:layout_height="40dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="@dimen/app_horizontal_margin"
+        android:layout_marginRight="@dimen/app_horizontal_margin">
+
+        <ImageView
+            style="@style/icon_style"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:src="@drawable/search_bar_ic2" />
+        <!--<item name="android:imeOptions">actionNext</item>-->
+        <EditText
+            android:id="@+id/search"
+            style="@style/value_style"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:hint="@string/hint_search_order"
+            android:textSize="@dimen/kv_itemview_hint_textsize" />
+    </LinearLayout>
     <!--客服-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -320,4 +326,4 @@
             android:textColor="@android:color/holo_orange_dark"
             android:textSize="18dp" />
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

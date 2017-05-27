@@ -1,8 +1,12 @@
 package payapps.zoker.com.payapp.model;
 
+import android.util.Log;
+
 import com.zekers.ui.view.recycler.VisitableTypeControl;
+import com.zekers.utils.logger.Logger;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 /**
  * 货物详情
@@ -60,9 +64,20 @@ public class Goods implements VisitableTypeControl.Visitable,Serializable {
     }
 
     public float getCost() {
-        return Cost;
+        if (Cost==0)
+            return Cost;
+        return Float.valueOf(decaima(Cost));
     }
 
+    public static String decaima(float cost){
+        DecimalFormat decimalFormat=new DecimalFormat(".00");//构造方法的字符格式这里如果小数不足2位,会以0补足.
+        String p=decimalFormat.format(cost);//format 返回的是字符串
+        Logger.e("Goods","cost="+cost);
+        Logger.e("Goods","p="+p);
+        if (cost<1)
+            p="0"+p;
+        return p;
+    }
     public void setCost(float cost) {
         Cost = cost;
     }

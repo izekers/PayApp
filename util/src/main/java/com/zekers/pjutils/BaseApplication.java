@@ -8,7 +8,8 @@ import com.zekers.utils.permission.PermissionManager;
 
 
 /**
- * Created by Administrator on 2017/1/22.
+ *
+ * Created by Zoker on 2017/1/22.
  */
 
 public class BaseApplication extends Application {

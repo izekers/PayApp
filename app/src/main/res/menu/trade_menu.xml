@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--没有icon的时候显示文字-->
-    <item android:id="@+id/ok"
-        android:orderInCategory="100"
-        android:icon="@drawable/ok"
-        android:title="确定"
-        app:showAsAction="ifRoom"/>
+    <!--<item android:id="@+id/ok"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:icon="@drawable/ok"-->
+        <!--android:title="确定"-->
+        <!--app:showAsAction="ifRoom"/>-->
     <item android:id="@+id/search"
         android:orderInCategory="100"
         android:icon="@drawable/search_bar_ic"

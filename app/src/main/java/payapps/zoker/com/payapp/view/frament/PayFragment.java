@@ -16,6 +16,7 @@ import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
 import com.aspsine.swipetoloadlayout.OnRefreshListener;
 import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.google.gson.Gson;
+import com.yanzhenjie.album.Album;
 import com.zekers.network.base.RxSubscribe;
 import com.zekers.pjutils.BaseApplication;
 import com.zekers.ui.view.recycler.VisitableTypeControl;
@@ -34,6 +35,8 @@ import payapps.zoker.com.payapp.model.Details;
 import payapps.zoker.com.payapp.view.Constant;
 import payapps.zoker.com.payapp.view.adapter.PayAdapter;
 import payapps.zoker.com.payapp.view.adapter.PayTypeFactory;
+import rx.Observable;
+import rx.Subscription;
 import rx.functions.Action1;
 
 /**
@@ -46,11 +49,22 @@ public class PayFragment extends Fragment {
     Constant.Pay_Type type;
 
     int PageIndex = 1;
-
+    boolean isSearch=false;
+    String keyWord="";
     public static PayFragment getInstance(Constant.Pay_Type type) {
         PayFragment fragment = new PayFragment();
         Bundle arg = new Bundle();
         arg.putSerializable(Constant.PAY_TYPE, type);
+        fragment.setArguments(arg);
+        return fragment;
+    }
+
+    public static PayFragment getSearchInstance(Constant.Pay_Type type,String keyWord) {
+        PayFragment fragment = new PayFragment();
+        Bundle arg = new Bundle();
+        arg.putSerializable(Constant.PAY_TYPE, type);
+        arg.putBoolean(Constant.IS_SEARCH_ORDER_,true);
+        arg.putString(Constant.keyWord,keyWord);
         fragment.setArguments(arg);
         return fragment;
     }
@@ -61,6 +75,10 @@ public class PayFragment extends Fragment {
         Bundle bundle = getArguments();
         if (bundle != null)
             type = (Constant.Pay_Type) bundle.getSerializable(Constant.PAY_TYPE);
+        if (bundle!=null){
+            isSearch =  bundle.getBoolean(Constant.IS_SEARCH_ORDER_,false);
+            keyWord=bundle.getString(Constant.keyWord,"");
+        }
     }
 
     SwipeToLoadLayout swipeToLoadLayout;
@@ -137,8 +155,13 @@ public class PayFragment extends Fragment {
      * 1 未付款 2已付款 3已取消
      */
     public void GetPayOrderList(int OrderStatus) {
-        payAction.GetPayOrderList(OrderStatus, PageIndex)
-                .subscribe(new RxSubscribe<List<Details>>() {
+        Observable<List<Details>> observable;
+        if (isSearch)
+            observable=payAction.GetPayOrderSearchList(keyWord,OrderStatus,PageIndex);
+        else
+            observable=payAction.GetPayOrderList(OrderStatus,PageIndex);
+
+                observable.subscribe(new RxSubscribe<List<Details>>() {
                     @Override
                     public void onError(String message) {
                         PageIndex--;

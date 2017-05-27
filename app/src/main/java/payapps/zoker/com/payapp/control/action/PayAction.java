@@ -566,6 +566,31 @@ public class PayAction {
                 .compose(RxNetHelper.<List<Records>>applySchedulers());
     }
 
+    /**
+     * 获取付款单搜索列表
+     * 1 未付款 2已付款 3已取消
+     */
+    public Observable<List<Details>> GetPayOrderSearchList(String keyworkd,int OrderStatus,int PageIndex){
+        String password = TokenRecord.getInstance().load();
+        String userId = UserRecord.getInstance().load().getId();
+        Log.d(TAG,"OrderStatus="+OrderStatus+" PageIndex"+PageIndex+" keyworkd="+keyworkd);
+        return service.GetPayOrderSearchList(userId,password,keyworkd,OrderStatus,PageIndex)
+                .compose(RxNetHelper.<List<Details>>handleResult())
+                .compose(RxNetHelper.<List<Details>>applySchedulers());
+    }
+
+    /**
+     * 获取收款单搜索列表
+     * 1 未付款 2已付款 3已取消
+     */
+    public Observable<List<Collection>> GetOrderSearchList(String keyworkd,int OrderStatus,int PageIndex){
+        String password = TokenRecord.getInstance().load();
+        String userId = UserRecord.getInstance().load().getId();
+        Log.d(TAG,"OrderStatus="+OrderStatus+" PageIndex"+PageIndex+" keyworkd="+keyworkd);
+        return service.GetOrderSearchList(userId,password,keyworkd,OrderStatus,PageIndex)
+                .compose(RxNetHelper.<List<Collection>>handleResult())
+                .compose(RxNetHelper.<List<Collection>>applySchedulers());
+    }
 
 
     /**

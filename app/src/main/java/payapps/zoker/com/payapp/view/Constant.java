@@ -35,4 +35,6 @@ public class Constant {
         MAN,WOMAN
     }
     public static final String ORDER_ID="ORDER_ID";
+    public static final String IS_SEARCH_ORDER_="IS_SEARCH_ORDER_";
+    public static final String keyWord = "keyWord";
 }

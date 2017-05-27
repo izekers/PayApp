@@ -65,6 +65,8 @@ public class MyInfoFragment extends Fragment{
         View view=inflater.inflate(R.layout.fragment_my,container,false);
         initView(view);
         initListener();
+        user= UserRecord.getInstance().load();
+        initData();
         return view;
     }
 

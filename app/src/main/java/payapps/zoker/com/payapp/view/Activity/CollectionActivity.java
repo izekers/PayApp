@@ -26,6 +26,7 @@ import com.zekers.utils.rx.EventBus.RxBus;
 import com.zoker.base.DialogUtils;
 
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -171,7 +172,7 @@ public class CollectionActivity extends BaseActivity implements AddGoodsContract
             for (Goods goods:beSelectGoods){
                 cost=cost+goods.getCost();
             }
-            goods_account.setText("" + cost);
+            goods_account.setText("" + Goods.decaima(cost)+"元");
         }
     }
 
@@ -216,7 +217,7 @@ public class CollectionActivity extends BaseActivity implements AddGoodsContract
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                goods_account.setText("" + cost);
+                goods_account.setText("" + Goods.decaima(cost)+"元");
             }
         }
     };
@@ -323,7 +324,7 @@ public class CollectionActivity extends BaseActivity implements AddGoodsContract
             for (Goods goods:beSelectGoods){
                 cost=cost+goods.getCost();
             }
-            goods_account.setText("" + cost);
+            goods_account.setText("" + Goods.decaima(cost)+"元");
         }
         Logger.d("1231", new Gson().toJson(goodsSp));
         adapter.setData(goodsSp);

@@ -38,6 +38,6 @@ public class OrderGoodsViewHolder extends VisitableViewHolder<Goods> {
         item_name.setText(model.getProductName());
         item_vale.setText(model.getPrice() + "元/" + model.getUnit());
         item_number.setText("数量："+model.getQuantity()+model.getUnit());
-        item_account.setText(model.getCost()+"元");
+        item_account.setText(Goods.decaima(model.getCost())+"元");
     }
 }

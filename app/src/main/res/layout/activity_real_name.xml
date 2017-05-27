@@ -23,9 +23,9 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:divider="@drawable/line"
         android:orientation="vertical"
-        android:showDividers="middle"
-        android:divider="@drawable/line">
+        android:showDividers="middle">
 
         <LinearLayout
             style="@style/line_style"
@@ -36,9 +36,8 @@
 
             <TextView
                 style="@style/name_style"
-                android:layout_width="0sp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="@string/real_name" />
 
             <EditText
@@ -46,8 +45,8 @@
                 style="@style/name_style"
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
-                android:background="@null"
-                android:layout_weight="4" />
+                android:layout_weight="4"
+                android:background="@null" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,9 +58,8 @@
 
             <TextView
                 style="@style/name_style"
-                android:layout_width="0sp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:text="@string/real_name_number" />
 
             <EditText
@@ -69,25 +67,25 @@
                 style="@style/name_style"
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
-                android:background="@null"
-                android:layout_weight="4" />
+                android:layout_weight="4"
+                android:background="@null" />
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal"
             android:paddingEnd="@dimen/app_vertical_margin"
             android:paddingLeft="@dimen/app_vertical_margin"
             android:paddingRight="@dimen/app_vertical_margin"
-            android:paddingStart="@dimen/app_vertical_margin"
-            android:orientation="horizontal">
+            android:paddingStart="@dimen/app_vertical_margin">
 
             <ImageView
                 android:id="@+id/realname_img1"
                 android:layout_width="@dimen/real_man_img_width"
                 android:layout_height="@dimen/real_man_img_height"
-                android:src="@drawable/real_bg_1"/>
+                android:src="@drawable/real_bg_1" />
 
             <ImageView
                 android:id="@+id/realname_img2"
@@ -95,7 +93,7 @@
                 android:layout_height="@dimen/real_man_img_height"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/real_bg_2"/>
+                android:src="@drawable/real_bg_2" />
         </RelativeLayout>
     </LinearLayout>
 

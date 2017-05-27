@@ -13,6 +13,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+
     </style>
 
     <style name="startLoadTheme" parent="AppTheme.NoActionbar">
@@ -22,6 +24,7 @@
 
     <style name="logopic">
         <item name="android:layout_height">@dimen/login_pic_height</item>
+
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@drawable/bg</item>
     </style>

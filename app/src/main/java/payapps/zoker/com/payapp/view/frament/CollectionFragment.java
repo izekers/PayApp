@@ -34,6 +34,7 @@ import payapps.zoker.com.payapp.view.Constant;
 import payapps.zoker.com.payapp.view.adapter.CollectionAdapter;
 import payapps.zoker.com.payapp.view.adapter.PayAdapter;
 import payapps.zoker.com.payapp.view.adapter.PayTypeFactory;
+import rx.Observable;
 import rx.functions.Action1;
 
 /**
@@ -48,11 +49,22 @@ public class CollectionFragment extends Fragment {
     Constant.Pay_Type type;
 
     int PageIndex = 1;
-
+    boolean isSearch=false;
+    String keyWord="";
     public static CollectionFragment getInstance(Constant.Pay_Type type) {
         CollectionFragment fragment = new CollectionFragment();
         Bundle arg = new Bundle();
         arg.putSerializable(Constant.PAY_TYPE, type);
+        fragment.setArguments(arg);
+        return fragment;
+    }
+
+    public static CollectionFragment getSearchInstance(Constant.Pay_Type type,String keyWord) {
+        CollectionFragment fragment = new CollectionFragment();
+        Bundle arg = new Bundle();
+        arg.putSerializable(Constant.PAY_TYPE, type);
+        arg.putBoolean(Constant.IS_SEARCH_ORDER_,true);
+        arg.putString(Constant.keyWord,keyWord);
         fragment.setArguments(arg);
         return fragment;
     }
@@ -63,6 +75,11 @@ public class CollectionFragment extends Fragment {
         Bundle bundle = getArguments();
         if (bundle != null)
             type = (Constant.Pay_Type) bundle.getSerializable(Constant.PAY_TYPE);
+
+        if (bundle!=null){
+            isSearch =  bundle.getBoolean(Constant.IS_SEARCH_ORDER_,false);
+            keyWord=bundle.getString(Constant.keyWord,"");
+        }
     }
 
     View empty_view;
@@ -142,8 +159,14 @@ public class CollectionFragment extends Fragment {
      * 1 未付款 2已付款 3已取消
      */
     public void GetOrderList(int OrderStatus) {
+        Observable<List<Collection>> observable;
+        if (isSearch)
+            observable=payAction.GetOrderSearchList(keyWord,OrderStatus,PageIndex);
+        else
+            observable=payAction.GetOrderList(OrderStatus,PageIndex);
+
         Logger.d("CollectionFragment", "OrderStatus=" + OrderStatus);
-        payAction.GetOrderList(OrderStatus, PageIndex)
+        observable
                 .subscribe(new RxSubscribe<List<Collection>>() {
                     @Override
                     public void onError(String message) {

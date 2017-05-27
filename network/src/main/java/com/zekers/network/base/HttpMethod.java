@@ -21,7 +21,9 @@ public class HttpMethod {
         https = new HashMap<>();
         addRetrofit(API_HTTP, "http://edu.depts.bingosoft.net:8084/home/");
         addRetrofit(API_HTTPS, "https://kyfw.12306.cn/");
-        addRetrofit(API_PAY, "http://m.chaozf.com/");
+//        addRetrofit(API_PAY, "http://m.chaozf.com/");
+        addRetrofit(API_PAY, "http://www.chaozf.com/");
+
     }
 
     //配置基础的Retrofit

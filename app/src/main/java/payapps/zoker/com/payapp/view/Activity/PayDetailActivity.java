@@ -1,14 +1,17 @@
 package payapps.zoker.com.payapp.view.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.zekers.ui.view.widget.AbilityToolBar;
 
 import payapps.zoker.com.payapp.R;
 import payapps.zoker.com.payapp.model.Records;
+import payapps.zoker.com.payapp.view.Constant;
 
 /**
  * 订单记录->点击按钮
@@ -32,8 +35,18 @@ public class PayDetailActivity extends BaseActivity{
                 int id = view.getId();
                 switch (id) {
                     case R.id.search:
+                        abilityToolBar.showSearchBar();
                         break;
                 }
+            }
+        });
+        abilityToolBar.setSearchListener(new AbilityToolBar.SearchListener() {
+            @Override
+            public void search(EditText editText, String keyWord) {
+                Intent intent=new Intent(PayDetailActivity.this, SearchOrderActivity.class);
+                intent.putExtra(Constant.keyWord,keyWord);
+                startActivity(intent);
+                abilityToolBar.hideSearchBar();
             }
         });
         abilityToolBar.setOnBackOnClickListener(new View.OnClickListener() {

@@ -327,6 +327,21 @@ public interface PayService {
     Observable<DataWrapper<Details>> GetPayOrderDetail(@Field("UserID") String userId, @Field("Password") String password,@Field("OrderID") String OrderID);
 
 
+    /**
+     * 获取收款单搜索列表
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("webservice/webapi.asmx/GetOrderSearchList")
+    Observable<DataWrapper<List<Collection>>> GetOrderSearchList(@Field("UserID") String userId, @Field("Password") String password, @Field("KeyWords") String KeyWords, @Field("OrderStatus") int OrderStatus, @Field("PageIndex") int PageIndex);
+
+    /**
+     * 获取付款单搜索列表
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("webservice/webapi.asmx/GetPayOrderSearchList")
+    Observable<DataWrapper<List<Details>>> GetPayOrderSearchList(@Field("UserID") String userId, @Field("Password") String password, @Field("KeyWords") String KeyWords, @Field("OrderStatus") int OrderStatus, @Field("PageIndex") int PageIndex);
 
 
     /**

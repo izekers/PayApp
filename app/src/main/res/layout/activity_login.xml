@@ -4,19 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        style="@style/logopic">
-
-
-        <LinearLayout
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        </LinearLayout>
-    </RelativeLayout>
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/bg" />
+    <!--
+        pay@2017
+        com.payapp
+        payapp@2017
+    -->
     <FrameLayout
         android:id="@+id/login_fl"
         android:layout_width="match_parent"

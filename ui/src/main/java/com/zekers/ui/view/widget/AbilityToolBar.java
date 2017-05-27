@@ -2,14 +2,18 @@ package com.zekers.ui.view.widget;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v4.util.SparseArrayCompat;
 import android.support.v7.view.menu.MenuBuilder;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -57,6 +61,9 @@ public class AbilityToolBar extends RelativeLayout {
     private AblityToolBarStyle style;
     private int mMenuRes;
     private SparseArrayCompat<View> view=new SparseArrayCompat<>();
+    private View search_bar,search_back;
+    private EditText toolbar_search_txt;
+    private SearchListener searchListener;
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
@@ -65,7 +72,29 @@ public class AbilityToolBar extends RelativeLayout {
         mMenuView2 = (ViewGroup) findViewById(R.id.toolbar_menu2);
         mTitle = (TextView) findViewById(R.id.toolbar_title);
         mMenuMore = (ViewGroup) findViewById(R.id.toolbar_menu_more);
+        search_bar=findViewById(R.id.toolbar_search_bar);
+        search_back=findViewById(R.id.toolbar_search_back);
+        toolbar_search_txt=(EditText)findViewById(R.id.toolbar_search_txt);
 
+        toolbar_search_txt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                //回车键
+                if(actionId == EditorInfo.IME_ACTION_DONE){
+                    if (searchListener!=null){
+                        searchListener.search(toolbar_search_txt,toolbar_search_txt.getText().toString());
+                    }
+                }
+                return true;
+            }
+        });
+
+        search_back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                search_bar.setVisibility(GONE);
+            }
+        });
         mMenuView1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +110,7 @@ public class AbilityToolBar extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 if (onMenuItemClickListener != null)
-                    if (mMenuView1.getChildAt(0).getVisibility() == View.VISIBLE)
+                    if (mMenuView2.getChildAt(0).getVisibility() == View.VISIBLE)
                         onMenuItemClickListener.onMenuItemClick(mMenuView2.getChildAt(0));
                     else
                         onMenuItemClickListener.onMenuItemClick(mMenuView2.getChildAt(1));
@@ -94,10 +123,28 @@ public class AbilityToolBar extends RelativeLayout {
 
             }
         });
-
         setStyle(getMainStyle());
     }
 
+    public void showSearchBar(){
+        search_bar.setVisibility(VISIBLE);
+    }
+    public void hideSearchBar(){
+        toolbar_search_txt.setText("");
+        search_bar.setVisibility(GONE);
+    }
+
+    public SearchListener getSearchListener() {
+        return searchListener;
+    }
+
+    public void setSearchListener(SearchListener searchListener) {
+        this.searchListener = searchListener;
+    }
+
+    public interface SearchListener{
+        void search(EditText editText,String keyWord);
+    }
     //设置标题
     public void setTitle(CharSequence title) {
         mTitle.setText(title);
@@ -146,18 +193,18 @@ public class AbilityToolBar extends RelativeLayout {
                 }
                 if (!isShow) break;
                 mMenuView.setVisibility(VISIBLE);
+                mMenuView.getChildAt(1).setId(mMenu.getItem(i).getItemId());
+                mMenuView.getChildAt(0).setId(mMenu.getItem(i).getItemId());
                 if (mMenu.getItem(i).getIcon() != null) {
-                    mMenuView.getChildAt(0).setId(mMenu.getItem(i).getItemId());
                     ((ImageView) (mMenuView.getChildAt(0))).setImageDrawable(mMenu.getItem(i).getIcon());
                     mMenuView.getChildAt(1).setVisibility(GONE);
                     view.put(mMenu.getItem(i).getItemId(),mMenuView.getChildAt(0));
                 } else {
-                    mMenuView.getChildAt(1).setId(mMenu.getItem(i).getItemId());
                     ((TextView) (mMenuView.getChildAt(1))).setText(mMenu.getItem(i).getTitle());
                     mMenuView.getChildAt(0).setVisibility(GONE);
                     view.put(mMenu.getItem(i).getItemId(),mMenuView.getChildAt(1));
-                    Log.e("AbilityToolBar","id="+mMenu.getItem(i).getItemId());
                 }
+                Log.e("AbilityToolBar","id="+mMenu.getItem(i).getItemId()+"text="+mMenuView.getChildAt(1).getId()+"img="+mMenuView.getChildAt(0).getId());
             }
             //显示[更多]按钮
         } else {

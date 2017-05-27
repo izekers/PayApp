@@ -143,7 +143,7 @@ public class OrderCheckActivity extends BaseActivity {
                     @Override
                     public void onNext(Collection s) {
                         currentCollection = s;
-                        account_view.setText(s.getAmount());
+                        account_view.setText(s.getAmount()+"元");
                         name_view.setText(s.getPayUserName());
                         id_view.setText(s.getOrderNo());
 

@@ -32,7 +32,7 @@ public class GoodsSelectViewHolder extends VisitableViewHolder<Goods> {
     @Override
     public void setUpView(final Goods model, int position, RecyclerView.Adapter adapter) {
         Logger.d("123",new Gson().toJson(model));
-        name.setText(model.getProductName());
+        name.setText(model.getProductName()+"("+model.getPrice()+"元/"+model.getUnit()+")");
         number.setText(""+model.getQuantity());
         jian.setOnClickListener(new View.OnClickListener() {
             @Override

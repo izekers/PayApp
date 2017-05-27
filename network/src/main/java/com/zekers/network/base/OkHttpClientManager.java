@@ -51,8 +51,8 @@ public class OkHttpClientManager {
 
     protected static void setClientConfig(OkHttpClient.Builder builder) throws Exception {
         builder
-                .writeTimeout(3, TimeUnit.SECONDS)
-                .readTimeout(3, TimeUnit.SECONDS)
+                .writeTimeout(2, TimeUnit.SECONDS)
+                .readTimeout(2, TimeUnit.SECONDS)
                 .addInterceptor(new HandlerInterceptor())//LOG过滤器
                 .sslSocketFactory(getIgnoreSSLSocketFactory(), x509TrustManager).hostnameVerifier(new HostnameVerifier() {
             @Override
