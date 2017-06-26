@@ -17,6 +17,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        sourceSets {
+            main {
+                jni.srcDirs = []
+            }
+        }
     }
 }
 
@@ -31,4 +36,6 @@ dependencies {
     compile project(':network')
     compile project(':util')
     compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    compile files('libs/UPPayPluginExPro.jar')
+    compile files('libs/UPPayAssistEx.jar')
 }

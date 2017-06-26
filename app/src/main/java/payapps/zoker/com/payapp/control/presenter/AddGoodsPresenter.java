@@ -43,7 +43,7 @@ public class AddGoodsPresenter implements AddGoodsContract.Presenter {
 
     @Override
     public void GetSecondList(String firstCateID) {
-        view.loading();
+//        view.loading();
         payAction.GetSecondList(firstCateID)
                 .subscribe(new RxSubscribe<SecondList>() {
                     @Override
